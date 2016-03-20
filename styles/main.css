@@ -1,0 +1,106 @@
+.container {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td {
+    border: 2px solid black;
+    width: 90px;
+    height: 90px;
+}
+
+#choice1 {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#choice2 {
+    margin: 10px;
+    cursor: pointer;
+}
+
+#score {
+    font-size: 30px;
+}
+
+/* Blue */
+.c-b {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+    background: #5bc3ff;
+    margin: 0 auto;
+}
+
+.s-b {
+    width: 50px;
+    height: 50px;
+    background: #5bc3ff;
+    margin: 0 auto;
+}
+
+.t-b {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 0px solid transparent;
+    border-bottom: 50px solid #5bc3ff;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+/* Yellow */
+.c-y {
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+    background: #f4dc00;
+    margin: 0 auto;
+}
+
+.s-y {
+    width: 50px;
+    height: 50px;
+    background: #f4dc00;
+    margin: 0 auto;
+}
+
+.t-y {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 0px solid transparent;
+    border-bottom: 50px solid #f4dc00;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+
+/* Red */
+.c-r {
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+    background: #d10000;
+    margin: 0 auto;
+}
+
+.s-r {
+    width: 50px;
+    height: 50px;
+    background: #d10000;
+    margin: 0 auto;
+}
+
+.t-r {
+    width: 0px;
+    height: 0px;
+    margin: 0 auto;
+    border-top: 0px solid transparent;
+    border-bottom: 50px solid #d10000;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}

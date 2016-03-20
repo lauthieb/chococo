@@ -1,0 +1,16 @@
+{
+  "name": "kamisado",
+  "homepage": "https://github.com/lauthieb/cookie-factory",
+  "authors": [
+    "Laurent THIEBAULT <thiebault.laurent@gmail.com>"
+  ],
+  "description": "Cookie Factory",
+  "moduleType": [],
+  "keywords": [
+    "cookie-factory"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
