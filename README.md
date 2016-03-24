@@ -1,2 +1,1 @@
-# kamisado
-A Kamisado in JavaScript
+# cookie-factory
