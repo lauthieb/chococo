@@ -23,6 +23,11 @@ td {
     cursor: pointer;
 }
 
+#choice3 {
+    margin: 10px;
+    cursor: pointer;
+}
+
 #score {
     font-size: 30px;
 }
