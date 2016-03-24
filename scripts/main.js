@@ -1,6 +1,7 @@
 var choice = null;
 var idChoice = null;
 var score = 0;
+var shapesToRemove = [];
 
 function initBoard () {
     var board = $('#board');
@@ -77,6 +78,15 @@ function checkValidity () {
     checkColumns(shapes);
     checkDiagonal1(shapes);
     checkDiagonal2(shapes);
+    removeShapes();
+}
+
+function removeShapes() {
+    for (var i = 0 ; i < shapesToRemove.length ; i++) {
+        $(shapesToRemove[i]).find('>:first-child').remove();
+    }
+    refreshScore(shapesToRemove.length);
+    shapesToRemove = [];
 }
 
 function checkRaws (shapes) {
@@ -93,10 +103,9 @@ function checkRaws (shapes) {
                 okRaw = checkCriteres(forme0, forme1, forme2, coul0, coul1, coul2);
 
                 if(checkCriteres(forme0, forme1, forme2, coul0, coul1, coul2)) {
-                    $('#' + i + '0').find('>:first-child').remove();
-                    $('#' + i + '1').find('>:first-child').remove();
-                    $('#' + i + '2').find('>:first-child').remove();
-                    refreshScore(3);
+                    shapesToRemove.push('#' + i + '0');
+                    shapesToRemove.push('#' + i + '1');
+                    shapesToRemove.push('#' + i + '2');
                 }
             }
         }
@@ -115,10 +124,9 @@ function checkColumns (shapes) {
                 var coul2 = shapes[2][j].charAt(2);
 
                 if(checkCriteres(forme0, forme1, forme2, coul0, coul1, coul2)) {
-                    $('#' + '0' + j).find('>:first-child').remove();
-                    $('#' + '1' + j).find('>:first-child').remove();
-                    $('#' + '2' + j).find('>:first-child').remove();
-                    refreshScore(3);
+                    shapesToRemove.push('#' + '0' + j);
+                    shapesToRemove.push('#' + '1' + j);
+                    shapesToRemove.push('#' + '2' + j);
                 }
             }
         }
@@ -136,10 +144,9 @@ function checkDiagonal1 (shapes) {
     var coul2 = shapes[2][2].charAt(2);
 
     if(checkCriteres(forme0, forme1, forme2, coul0, coul1, coul2)) {
-        $('#00').find('>:first-child').remove();
-        $('#11').find('>:first-child').remove();
-        $('#22').find('>:first-child').remove();
-        refreshScore(3);
+        shapesToRemove.push('#00');
+        shapesToRemove.push('#11');
+        shapesToRemove.push('#22');
     }
 }
 
@@ -154,10 +161,9 @@ function checkDiagonal2 (shapes) {
     var coul2 = shapes[2][0].charAt(2);
 
     if(checkCriteres(forme0, forme1, forme2, coul0, coul1, coul2)) {
-        $('#02').find('>:first-child').remove();
-        $('#11').find('>:first-child').remove();
-        $('#20').find('>:first-child').remove();
-        refreshScore(3);
+        shapesToRemove.push('#02');
+        shapesToRemove.push('#11');
+        shapesToRemove.push('#20');
     }
 }
 
@@ -172,7 +178,7 @@ function checkCriteres (forme0, forme1, forme2, coul0, coul1, coul2) {
                 return true;
             }
             /* Différentes couleurs */
-            if(coul0 != coul1 && coul1 != coul2 && coul0 != coul2) {
+            if (coul0 != coul1 && coul1 != coul2 && coul0 != coul2) {
                 return true;
             }
         }
