@@ -35,6 +35,10 @@ function initBoard () {
             tr.append(td);
         }
     }
+
+    $('#replay').on('click', function() {
+        replay();
+    });
 }
 
 function initChoices () {
@@ -208,6 +212,17 @@ function checkCriteres (forme0, forme1, forme2, coul0, coul1, coul2) {
 
 function refreshScore (nb) {
     score += nb;
+    $('#score').text(score);
+}
+
+function replay() {
+    $('#board tr').remove();
+    initBoard();
+    $('#choice1').find('>:first-child').remove();
+    $('#choice2').find('>:first-child').remove();
+    $('#choice3').find('>:first-child').remove();
+    initChoices();
+    score = 0;
     $('#score').text(score);
 }
 

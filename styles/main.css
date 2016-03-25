@@ -26,6 +26,7 @@ td {
 #replay {
     vertical-align: bottom;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 #choices {
