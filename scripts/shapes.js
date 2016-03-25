@@ -1,4 +1,4 @@
-var shapes = ['c-b', 's-b', 't-b', 'c-y', 's-y', 't-y', 'c-r', 's-r', 't-r'];
+var shapes = ['c-w', 's-w', 't-w', 'c-m', 's-m', 't-m', 'c-b', 's-b', 't-b'];
 
 function randomizeShape() {
     return shapes[Math.floor(Math.random()*shapes.length)];

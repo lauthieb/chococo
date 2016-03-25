@@ -4,29 +4,27 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.css" charset="utf-8">
         <link rel="stylesheet" href="styles/main.css" charset="utf-8">
-        <title>Cookie Factory</title>
+        <title>Chococo</title>
     </head>
     <body>
         <div class="container">
-            <h1>Cookie Factory</h1>
-            <div class="raw">
-                <div class="col-xs-6">
-                    <table id="board"></table>
-                </div>
-                <div class="col-xs-6">
-                    <h4>Choix 1 : </h4>
-                    <div id="choice1"></div>
-                    <h4>Choix 2 : </h4>
-                    <div id="choice2"></div>
-                    <h4>Choix 3 : </h4>
-                    <div id="choice3"></div>
-                </div>
+            <div id="titre">
+                <img src="images/chococo.png" width="310">
             </div>
-            <div class="raw">
-                <div class="col-xs-12">
-                    <h2>Score : </h2>
+            <div id="menus">
+                <div id="menu1">
                     <div id="score"></div>
                 </div>
+                <div id="menu2">
+                    <img src="images/replay.png" width="40" id="replay">
+                </div>
+            </div>
+            <table id="board">
+            </table>
+            <div id="choices">
+                <div id="choice1"></div>
+                <div id="choice2"></div>
+                <div id="choice3"></div>
             </div>
         </div>
 

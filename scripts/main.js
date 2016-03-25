@@ -14,12 +14,15 @@ function initBoard () {
             td.attr('id', i + '' + j);
             td.on('click', function() {
                 if (choice != null && idChoice != null && $(this).children().length == 0) {
-                    var shape = $('<div></div>');
+                    var shape = $('<img></img>');
                     shape.attr('class', choice);
+                    shape.attr('src', 'images/' + choice + '.png');
                     $(this).append(shape);
 
-                    var shape = $('<div></div>');
-                    shape.attr('class', randomizeShape());
+                    var shape = $('<img></img>');
+                    var randomShape = randomizeShape();
+                    shape.attr('class', randomShape);
+                    shape.attr('src', 'images/' + randomShape + '.png');
 
                     $(idChoice).find('>:first-child').remove();
                     $(idChoice).append(shape);
@@ -35,24 +38,30 @@ function initBoard () {
 }
 
 function initChoices () {
-    var shape1 = $('<div></div>');
-    shape1.attr('class', randomizeShape());
+    var shape1 = $('<img></img>');
+    var randomShape1 = randomizeShape();
+    shape1.attr('class', randomShape1);
+    shape1.attr('src', 'images/' + randomShape1 + '.png');
     $('#choice1').append(shape1);
     $('#choice1').on('click', function() {
         choice = $(this).find('>:first-child').attr('class');
         idChoice = '#choice1';
     });
 
-    var shape2 = $('<div></div>');
-    shape2.attr('class', randomizeShape());
+    var shape2 = $('<img></img>');
+    var randomShape2 = randomizeShape();
+    shape2.attr('class', randomShape2);
+    shape2.attr('src', 'images/' + randomShape2 + '.png');
     $('#choice2').append(shape2);
     $('#choice2').on('click', function() {
         choice = $(this).find('>:first-child').attr('class');
         idChoice = '#choice2';
     });
 
-    var shape3 = $('<div></div>');
-    shape3.attr('class', randomizeShape());
+    var shape3 = $('<img></img>');
+    var randomShape3 = randomizeShape();
+    shape3.attr('class', randomShape3);
+    shape3.attr('src', 'images/' + randomShape3 + '.png');
     $('#choice3').append(shape3);
     $('#choice3').on('click', function() {
         choice = $(this).find('>:first-child').attr('class');
