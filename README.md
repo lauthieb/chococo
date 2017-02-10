@@ -1,1 +1,3 @@
-# cookie-factory
+# chococo
+
+A game in JavaScript
